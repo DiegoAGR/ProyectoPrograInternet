@@ -17,8 +17,13 @@ class CrearTablaCanciones extends Migration
           $table->increments('id')->unique();
           $table->string('titulo', 50);
           $table->string('artista', 30);
-          $table->string('album', 50);
-          $table->string('genero', 20);
+
+          $table->integer('genero_id')->unsigned();
+          $table->foreign('genero_id')->references('id')->on('generos');
+
+          $table->integer('album_id')->unsigned();
+          $table->foreign('album_id')->references('id')->on('albums');
+
           $table->time('duracion');
           $table->timestamps();
         });

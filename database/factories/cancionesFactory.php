@@ -7,9 +7,9 @@ $factory->define(App\Cancion::class, function (Faker $faker) {
 
       'titulo' =>$faker->word,
       'artista' =>$faker->firstName,
-      'album' =>$faker->sentence($nbWords = 3, $variableNbWords = true),
-      'genero' => $faker->state,
-      'duracion' => $faker->time($format = 'H:i:s', $max = '0:15:59'),
+      'album_id' =>$faker->numberBetween($min = 1, $max = 30),
+      'genero_id' => $faker->numberBetween($min = 1, $max = 120) ,
+      'duracion' => $faker->time($format = 'H:m:s', $max = '0:15:59'),
 
     ];
 });
