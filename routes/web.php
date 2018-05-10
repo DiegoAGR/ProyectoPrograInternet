@@ -31,3 +31,7 @@ Route::get('/home', 'HomeController@index')->name('home');
 
 Route::get('/CrearCancion','cancionController@create');
 Route::get('/canciones/{nombre}','cancionController@show');
+
+
+Route::get('/editarAlbum','albumController@index');
+Route::post('/editarAlbum/add', 'albumController@store');

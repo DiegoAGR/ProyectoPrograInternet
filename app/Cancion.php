@@ -20,6 +20,11 @@ class Cancion extends Model
              return $this->belongsTo('App\album');
          }
 
+    public function comments()
+   {
+       return $this->morphMany('App\Comentario', 'commentable');
+   }
+
 
       protected $table = 'cancion';
 }
