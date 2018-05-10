@@ -13,7 +13,7 @@ class CrearTablaUsuarios extends Migration
      */
     public function up()
     {
-        Schema::create('usuario', function (Blueprint $table) {
+        Schema::create('usuarios', function (Blueprint $table) {
           $table->increments('id')->unique();
           $table->string('nombre');
           $table->string("nickname");
@@ -33,6 +33,6 @@ class CrearTablaUsuarios extends Migration
     public function down()
     {
         Schema::dropIfExists('biblioteca');
-        Schema::dropIfExists('usuario');
+        Schema::dropIfExists('usuarios');
     }
 }

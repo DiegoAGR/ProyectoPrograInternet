@@ -3,6 +3,8 @@
 namespace App;
 
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\SoftDeletes;
+
 
 class Comentario extends Model
 {
@@ -14,8 +16,10 @@ class Comentario extends Model
 
 
     protected $fillable = [
-      'texto',
+      'texto',''
     ];
 
-    protected $table = 'comentario';
+    protected $table = 'comentarios';
+    protected $dates = ['deleted_at'];
+
 }

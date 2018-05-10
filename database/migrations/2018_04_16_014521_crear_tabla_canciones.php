@@ -13,7 +13,7 @@ class CrearTablaCanciones extends Migration
      */
     public function up()
     {
-        Schema::create('cancion', function (Blueprint $table) {
+        Schema::create('canciones', function (Blueprint $table) {
           $table->increments('id')->unique();
           $table->string('titulo', 50);
           $table->string('artista', 30);
@@ -36,6 +36,6 @@ class CrearTablaCanciones extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('cancion');
+        Schema::dropIfExists('canciones');
     }
 }

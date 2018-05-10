@@ -10,14 +10,13 @@ class Album extends Model
 
     public function canciones()
    {
-       return $this->hasMany('App\Canciones','id');
+       return $this->hasMany('App\Cancion','id');
    }
 
-       public function comments()
-      {
-          return $this->morphMany('App\Comentario', 'commentable');
-      }
-
+    public function comments()
+    {
+    return $this->morphMany('App\Comentario', 'commentable');
+    }
 
   protected $fillable = [
       'nombre','anio'

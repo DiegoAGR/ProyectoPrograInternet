@@ -11,7 +11,7 @@ class comentariosSeeder extends Seeder
      */
     public function run()
     {
-      $comentarios = factory(App\Comentario::class, 100)->create();
+      $comentarios = factory(App\Comentario::class, 150)->create();
 
     }
 }

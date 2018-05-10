@@ -7,10 +7,10 @@ $factory->define(App\Comentario::class, function (Faker $faker) {
   $al = rand(1,2);
         if($al==1)
         {
-          $tipo = "cancion";
+          $tipo = "App\Cancion";
         }
         else {
-          $tipo = "album";
+          $tipo = "App\Album";
         }
 
 

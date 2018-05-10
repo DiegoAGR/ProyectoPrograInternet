@@ -20,7 +20,13 @@
         Genero: {{$cancion->genero->nombre}}.<br>
         Duracion: {{$cancion->duracion}}.<br>
 
+
       </ul>
+
+        @foreach ($cancion->comentarios as $comentario):
+          {{ $comentario->texto }}
+        <br>
+      @endforeach
 
 </body>
 </html>

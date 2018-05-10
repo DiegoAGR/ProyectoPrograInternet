@@ -18,13 +18,13 @@ class Cancion extends Model
       public function album()
          {
              return $this->belongsTo('App\album');
-         }
+      }
 
-    public function comments()
+    public function comentarios()
    {
        return $this->morphMany('App\Comentario', 'commentable');
    }
 
 
-      protected $table = 'cancion';
+      protected $table = 'canciones';
 }

@@ -13,11 +13,11 @@ class CreateComentariosTable extends Migration
      */
     public function up()
     {
-        Schema::create('comentario', function (Blueprint $table) {
+        Schema::create('comentarios', function (Blueprint $table) {
             $table->increments('id')->unique();
             $table->text('texto');
-            $table->integer('commentable_id');
-            $table->string('commentable_type');
+            $table->morphs('commentable');
+            $table->softDeletes();
             $table->timestamps();
         });
     }
@@ -29,6 +29,6 @@ class CreateComentariosTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('comentario');
+        Schema::dropIfExists('comentarios');
     }
 }

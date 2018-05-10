@@ -12,10 +12,9 @@ class DatabaseSeeder extends Seeder
     public function run()
     {
       $this->call(comentariosSeeder::class);
-        $this->call(albumSeeder::class);
-        $this->call(generosSeeder::class);
+      $this->call(albumSeeder::class);
+      $this->call(generosSeeder::class);
       $this->call(cancionesSeeder::class);
       $this->call(tablaUsuariosSeeder::class);
-      $this->call(cancionesSeeder::class);
     }
 }

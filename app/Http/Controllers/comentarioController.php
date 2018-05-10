@@ -85,6 +85,7 @@ class comentarioController extends Controller
      */
     public function destroy($id)
     {
-        //
+      $comentario = App\Comentario::find($id);
+      $comentario->delete();
     }
 }
