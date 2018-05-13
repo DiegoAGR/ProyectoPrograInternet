@@ -3,14 +3,14 @@
 namespace App;
 
 use Illuminate\Database\Eloquent\Model;
-
+//Agregar fillables
 
 class Album extends Model
 {
 
     public function canciones()
    {
-       return $this->hasMany('App\Cancion','id');
+       return $this->hasMany('App\Song','id');
    }
 
     public function comments()

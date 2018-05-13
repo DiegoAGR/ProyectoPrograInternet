@@ -2,7 +2,7 @@
 
 use Illuminate\Database\Seeder;
 
-class cancionesSeeder extends Seeder
+class bibliotecaSeeder extends Seeder
 {
     /**
      * Run the database seeds.
@@ -11,7 +11,7 @@ class cancionesSeeder extends Seeder
      */
     public function run()
     {
-        $cancion = factory(App\Song::class, 100)->create();
+      $biblioteca = factory(App\Biblioteca::class, 150)->create();
 
     }
 }

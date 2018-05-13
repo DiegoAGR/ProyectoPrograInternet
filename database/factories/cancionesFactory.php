@@ -2,7 +2,7 @@
 
 use Faker\Generator as Faker;
 
-$factory->define(App\Cancion::class, function (Faker $faker) {
+$factory->define(App\Song::class, function (Faker $faker) {
     return [
 
       'titulo' =>$faker->word,

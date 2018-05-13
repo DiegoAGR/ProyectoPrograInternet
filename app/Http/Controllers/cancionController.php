@@ -3,7 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\Cancion;
+use App\Song;
 use DB;
 
 class cancionController extends Controller
@@ -49,7 +49,7 @@ class cancionController extends Controller
     public function show($id)
     {
 
-      $cancion = Cancion::find($id);
+      $cancion = Song::find($id);
       return view('cancionDetalle',compact('cancion'));
 
     }

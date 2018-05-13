@@ -4,7 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\User;
-
+use DB;
 class usuarioController extends Controller
 {
     /**
@@ -50,10 +50,9 @@ class usuarioController extends Controller
      */
     public function show($id)
     {
-      $user = User::find($id);
+      $usuario = User::find($id);
 
-    //  dd($user);
-      return view('detalleUsuario',compact('user'));
+      return view('pages.usuarioPrueba',compact('usuario'));
 
     }
 

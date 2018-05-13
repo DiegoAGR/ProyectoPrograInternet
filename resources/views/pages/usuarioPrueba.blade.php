@@ -8,7 +8,7 @@
     <div class="col-lg-3">
         <!-- Search Widget -->
         <div class="card my-4">
-            <h5 class="card-header">Santiago Alberto Duran Aguilar c:</h5>
+            <h5 class="card-header">{{$usuario->nombre}}</h5>
             <div class="card-body">
                 <img class="img-fluid d-block mx-auto" src="http://placehold.it/200x200&text=Logo" alt="">
             </div>
@@ -39,34 +39,23 @@
             </tr>
             </thead>
             <tbody>
+
+
+
+  @foreach ($usuario->songs as $song)
             <tr>
-                <td>El Murguero</td>
-                <td>Los Autenticos Decadentes</td>
-                <td>2015/11/09 23:02</td>
+
+                  <td> {{ $song->titulo }} </td>
+                  <td> {{ $song->artista }}  </td>
+                  <td> {{ $song->created_at }} </td>
             </tr>
-            <tr>
-                <td>El Murguero</td>
-                <td>Los Autenticos Decadentes</td>
-                <td>2015/01/09 04:02</td>
-            </tr>
-            <tr>
-                <td>El Murguero</td>
-                <td>Los Autenticos Decadentes</td>
-                <td>2014/11/09 09:02</td>
-            </tr>
-            <tr>
-                <td>El Murguero</td>
-                <td>Los Autenticos Decadentes</td>
-                <td>2015/10/20 09:02</td>
-            </tr>
-            <tr>
-                <td>El Murguero</td>
-                <td>Los Autenticos Decadentes</td>
-                <td>2015/10/20 09:10</td>
-            </tr>
+            @endforeach
+
             </tbody>
         </table>
         </div>
+
+
 
         <br>
         <hr>
