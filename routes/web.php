@@ -42,3 +42,9 @@ Route::get('/pUsuario', function () {
 Route::get('/buscar', function () {
     return view('pages.buscar');
 });
+Route::get('/artista', function () {
+    return view('pages.artista');
+});
+Route::get('/album', function () {
+    return view('pages.album');
+});

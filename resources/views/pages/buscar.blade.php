@@ -35,63 +35,14 @@
             </ul>
         </div>
     </div>
-    <div class="col-lg-3 col-md-6 col-sm-12">
-        <div class="card mb-4" style="width: 16rem;">
-            <img class="card-img-top" height="220" src="http://placehold.it/200x200&text=Logo" alt="canción">
-            <ul class="list-group list-group-flush">
-            <li class="list-group-item"><h5 class="card-title mb-1"><a href="#" class="card-link">Canción</a></h5></li>
-            <li class="list-group-item">Album: <a href="#" class="card-link">album</a></li>
-            <li class="list-group-item">Artista: <a href="#" class="card-link">artista</a></li>
-            </ul>
-        </div>
-    </div>
-    <div class="col-lg-3 col-md-6 col-sm-12">
-        <div class="card mb-4" style="width: 16rem;">
-            <img class="card-img-top" height="220" src="http://placehold.it/200x200&text=Logo" alt="canción">
-            <ul class="list-group list-group-flush">
-            <li class="list-group-item"><h5 class="card-title mb-1"><a href="#" class="card-link">Canción</a></h5></li>
-            <li class="list-group-item">Album: <a href="#" class="card-link">album</a></li>
-            <li class="list-group-item">Artista: <a href="#" class="card-link">artista</a></li>
-            </ul>
-        </div>
-    </div>
-    <div class="col-lg-3 col-md-6 col-sm-12">
-        <div class="card mb-4" style="width: 16rem;">
-            <img class="card-img-top" height="220" src="http://placehold.it/200x200&text=Logo" alt="canción">
-            <ul class="list-group list-group-flush">
-            <li class="list-group-item"><h5 class="card-title mb-1"><a href="#" class="card-link">Canción</a></h5></li>
-            <li class="list-group-item">Album: <a href="#" class="card-link">album</a></li>
-            <li class="list-group-item">Artista: <a href="#" class="card-link">artista</a></li>
-            </ul>
-        </div>
-    </div>
-    <div class="col-lg-3 col-md-6 col-sm-12">
-        <div class="card mb-4" style="width: 16rem;">
-            <img class="card-img-top" height="220" src="http://placehold.it/200x200&text=Logo" alt="canción">
-            <ul class="list-group list-group-flush">
-            <li class="list-group-item"><h5 class="card-title mb-1"><a href="#" class="card-link">Canción</a></h5></li>
-            <li class="list-group-item">Album: <a href="#" class="card-link">album</a></li>
-            <li class="list-group-item">Artista: <a href="#" class="card-link">artista</a></li>
-            </ul>
-        </div>
-    </div>
-    <div class="col-lg-3 col-md-6 col-sm-12">
-        <div class="card mb-4" style="width: 16rem;">
-            <img class="card-img-top" height="220" src="http://placehold.it/200x200&text=Logo" alt="canción">
-            <ul class="list-group list-group-flush">
-            <li class="list-group-item"><h5 class="card-title mb-1"><a href="#" class="card-link">Canción</a></h5></li>
-            <li class="list-group-item">Album: <a href="#" class="card-link">album</a></li>
-            <li class="list-group-item">Artista: <a href="#" class="card-link">artista</a></li>
-            </ul>
-        </div>
-    </div>
+
 </div>
 
 <!-- Album -->
 <div class="row">
     <div class="col-lg-12"><h4 class="mb-3">Albúm</h4></div>
 
-    <div class="col-lg-3">
+    <div class="col-lg-3 col-md-6 col-sm-12">
         <div class="card mb-4" style="width: 16rem;">
             <img class="card-img-top" height="220" src="http://placehold.it/200x200&text=Logo" alt="canción">
             <ul class="list-group list-group-flush">
@@ -107,7 +58,7 @@
 <div class="row">
     <div class="col-lg-12"><h4 class="mb-3">Artista</h4></div>
 
-    <div class="col-lg-3">
+    <div class="col-lg-3 col-md-6 col-sm-12">
         <div class="card" style="width: 16rem;">
             <div class="card-body">
             <h5 class="card-title mb-1"><a href="#" class="card-link">artista</a></h5>
