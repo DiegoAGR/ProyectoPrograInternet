@@ -48,3 +48,9 @@ Route::get('/artista', function () {
 Route::get('/album', function () {
     return view('pages.album');
 });
+Route::get('/actualizarPerfil', function () {
+    return view('pages.actualizarPerfil');
+});
+Route::get('/cancion', function () {
+    return view('pages.cancion');
+});
