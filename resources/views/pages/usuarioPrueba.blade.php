@@ -8,7 +8,7 @@
     <div class="col-lg-3">
         <!-- Search Widget -->
         <div class="card my-4">
-            <h5 class="card-header">{{$usuario->nombre}}</h5>
+            <h5 class="card-header">{{$usuario->nickname}}</h5>
             <div class="card-body">
                 <img class="img-fluid d-block mx-auto" src="http://placehold.it/200x200&text=Logo" alt="">
             </div>
@@ -77,10 +77,8 @@
         <div class="media mb-4">
             <img class="d-flex mr-3 rounded-circle" src="http://placehold.it/50x50" alt="">
             <div class="media-body">
-                <h5 class="mt-0">Nombre del usuario</h5>
-                Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin. Cras purus odio, vestibulum in
-                vulputate at, tempus viverra turpis. Fusce condimentum nunc ac nisi vulputate fringilla. Donec lacinia congue
-                felis in faucibus.
+                <h5 class="mt-0">{{$usuario->nombre}}</h5>
+                Breve descripcion de mi ser~
             </div>
         </div>
     </div>
