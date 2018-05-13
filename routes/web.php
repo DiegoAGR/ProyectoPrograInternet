@@ -33,6 +33,8 @@ Route::get('/canciones/{nombre}','cancionController@show');
 Route::get('/editarAlbum','albumController@index');
 Route::post('/editarAlbum/add', 'albumController@store');
 
+Route::get('/usuarioDetalle/{id}', 'usuarioController@edit');
+Route::post('/usuarioDetalle/{id}', 'usuarioController@update_avatar');
 
 //-----------------------------------------------------------
 
