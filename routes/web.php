@@ -32,3 +32,19 @@ Route::get('/canciones/{nombre}','cancionController@show');
 
 Route::get('/editarAlbum','albumController@index');
 Route::post('/editarAlbum/add', 'albumController@store');
+
+
+//-----------------------------------------------------------
+
+Route::get('/pUsuario', function () {
+    return view('pages.usuarioPrueba');
+});
+Route::get('/buscar', function () {
+    return view('pages.buscar');
+});
+Route::get('/artista', function () {
+    return view('pages.artista');
+});
+Route::get('/album', function () {
+    return view('pages.album');
+});
