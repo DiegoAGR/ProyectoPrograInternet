@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\User;
 use DB;
+use Image;
 class usuarioController extends Controller
 {
     /**
@@ -64,8 +65,25 @@ class usuarioController extends Controller
      */
     public function edit($id)
     {
-        //
+      $user = User::find($id);
+      return view('detalleUsuario',compact('user'));
     }
+
+    public function update_avatar(Request $request){
+
+     if($request->hasFile('avatar')){
+
+       $avatar = $request->file('avatar');
+       $filename = time() . '.' . $avatar->getClientOriginalExtension();
+       Image::make($avatar)->resize(300, 300)->save( public_path('/subidas/avatars/' . $filename ) );
+       //$user = Auth::user();
+       $user =User::find(1);
+       $user->avatar = $filename;
+       $user->save();
+     }
+     return view('detalleUsuario',compact('user'));
+   }
+
 
     /**
      * Update the specified resource in storage.
