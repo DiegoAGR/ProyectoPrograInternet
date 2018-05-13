@@ -20,7 +20,7 @@ Auth::routes();
 
 Route::get('/Usuarios', 'usuarioController@index');
 
-Route::get('/Usuarios/{id}', 'usuarioController@show');
+Route::get('/pUsuario/{id}', 'usuarioController@show');
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
@@ -36,9 +36,7 @@ Route::post('/editarAlbum/add', 'albumController@store');
 
 //-----------------------------------------------------------
 
-Route::get('/pUsuario', function () {
-    return view('pages.usuarioPrueba');
-});
+
 Route::get('/buscar', function () {
     return view('pages.buscar');
 });

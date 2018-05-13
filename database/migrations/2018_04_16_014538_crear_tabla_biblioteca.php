@@ -13,11 +13,14 @@ class CrearTablaBiblioteca extends Migration
      */
     public function up()
     {
-        Schema::create('biblioteca', function (Blueprint $table) {
-          $table->integer('id_Usuario')->unique();
-        //  $table->foreign('id_Usuario')->references('id')->on('usuario');
-          $table->integer('idCancion');
-      //    $table->foreign('idCancion')->references('id')->on('cancion');
+        Schema::create('song_user', function (Blueprint $table) {
+          $table->increments('id');
+          $table->integer('user_id')->unsigned();
+          $table->foreign('user_id')->references('id')->on('usuarios');
+          $table->integer('song_id')->unsigned();
+          $table->foreign('song_id')->references('id')->on('songs');
+          $table->timestamps();
+
         });
     }
 
@@ -28,6 +31,6 @@ class CrearTablaBiblioteca extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('biblioteca');
+        Schema::dropIfExists('song_Usuario');
     }
 }

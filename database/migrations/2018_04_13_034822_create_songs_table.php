@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CrearTablaCanciones extends Migration
+class CreateSongsTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,7 +13,7 @@ class CrearTablaCanciones extends Migration
      */
     public function up()
     {
-        Schema::create('canciones', function (Blueprint $table) {
+        Schema::create('songs', function (Blueprint $table) {
           $table->increments('id')->unique();
           $table->string('titulo', 50);
           $table->string('artista', 30);
@@ -36,6 +36,6 @@ class CrearTablaCanciones extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('canciones');
+        Schema::dropIfExists('songs');
     }
 }

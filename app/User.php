@@ -15,6 +15,12 @@ class User extends Authenticatable
      * @var array
      */
 
+     public function songs()
+     {
+         return $this->belongsToMany('App\Song');
+     }
+
+
     protected $fillable = [
         'nombre', 'nickname' , 'correoElectronico' , 'password',
     ];
@@ -28,6 +34,6 @@ class User extends Authenticatable
         'password', 'remember_token',
     ];
 
-    protected $table = 'usuario';
+    protected $table = 'usuarios';
 
 }

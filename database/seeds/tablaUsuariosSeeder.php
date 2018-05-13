@@ -12,7 +12,7 @@ class tablaUsuariosSeeder extends Seeder
     public function run()
     {
 
-      $user = factory(App\User::class, 30)->create();
+      $user = factory(App\User::class, 50)->create();
 
 
       /*
