@@ -8,9 +8,9 @@
     <div class="col-lg-3">
         <!-- Search Widget -->
         <div class="card my-4">
-            <h5 class="card-header">Albúm</h5>
+            <h5 class="card-header">Albúm  <strong> {{$song->album->nombre}} </strong> </h5>
             <div class="card-body">
-                <img class="img-fluid d-block mx-auto" src="http://placehold.it/200x200&text=Logo" alt="">
+                <img class="img-fluid d-block mx-auto" src="/subidas/covers/{{ $song->album->cover }}" alt="">
             </div>
             <ul class="list-group list-group-flush">
                 <li class="list-group-item"><a href="#" class="card-link">Canción 1</a></li>
@@ -24,12 +24,12 @@
     <div class="col-lg-9">
 
         <!-- Title -->
-        <h1 class="mt-4">Canción</h1>
-        <h4 class="mt-1">de <strong>Artista</strong></h4>
+        <h1 class="mt-4">{{$song->titulo}}</h1>
+        <h4 class="mt-1">de <strong>{{$song->artista}}</strong></h4>
         <br>
         <ul class="list-group list-group-flush">
-            <li class="list-group-item">Duración: <strong>03:00 minutos</strong></li>
-            <li class="list-group-item">Mas info</li>
+            <li class="list-group-item">Duración: <strong>{{$song->duracion}}</strong></li>
+            <li class="list-group-item">Genero <strong>{{$song->genero->nombre}} </strong> </li>
             <li class="list-group-item">Mas info</li>
             <li class="list-group-item">Mas info</li>
             <li class="list-group-item">Mas info</li>

@@ -10,12 +10,12 @@
         <div class="card my-4">
             <h5 class="card-header">{{$usuario->nickname}}</h5>
             <div class="card-body">
-                <img class="img-fluid d-block mx-auto" src="http://placehold.it/200x200&text=Logo" alt="">
+                <img class="img-fluid d-block mx-auto" src="/subidas/avatars/{{ $usuario->avatar }}" alt="">
             </div>
         </div>
 
         <div class="col-lg-12">
-            <a class="btn btn-primary btn-block" width="100%" href="#">Editar</a>
+            <a class="btn btn-primary btn-block" width="100%" href="{{route('ajustes')}}">Editar</a>
         </div>
     </div>
 
@@ -42,7 +42,7 @@
 
 
 
-  @foreach ($usuario->songs as $song)
+            @foreach ($usuario->songs as $song)
             <tr>
 
                   <td> {{ $song->titulo }} </td>

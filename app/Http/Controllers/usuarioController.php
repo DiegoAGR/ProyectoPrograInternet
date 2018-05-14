@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use App\User;
 use DB;
 use Image;
+use Auth;
 class usuarioController extends Controller
 {
     /**
@@ -49,9 +50,10 @@ class usuarioController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show($id)
+    public function show()
     {
-      $usuario = User::find($id);
+      #$usuario = User::find($id);
+      $usuario = Auth::user();
 
       return view('pages.usuarioPrueba',compact('usuario'));
 
@@ -63,10 +65,10 @@ class usuarioController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function edit($id)
+    public function edit()
     {
-      $user = User::find($id);
-      return view('detalleUsuario',compact('user'));
+      $usuario = Auth::user();
+      return view('pages.actualizarPerfil',compact('usuario'));
     }
 
     public function update_avatar(Request $request){

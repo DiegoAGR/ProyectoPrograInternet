@@ -49,8 +49,9 @@ class cancionController extends Controller
     public function show($id)
     {
 
-      $cancion = Song::find($id);
-      return view('cancionDetalle',compact('cancion'));
+      $song = Song::find($id);
+
+      return view('pages.cancion',compact('song'));
 
     }
 

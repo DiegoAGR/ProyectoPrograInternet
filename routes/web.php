@@ -20,21 +20,28 @@ Auth::routes();
 
 Route::get('/Usuarios', 'usuarioController@index');
 
-Route::get('/pUsuario/{id}', 'usuarioController@show');
+#Route::get('/pUsuario/{id}', 'usuarioController@show'); #No quitar esta linea, es para pruebas
+Route::get('/pUsuario', 'usuarioController@show')->name('perfil');
+
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
 
 
 Route::get('/CrearCancion','cancionController@create');
-Route::get('/canciones/{nombre}','cancionController@show');
+Route::get('/cancion/{id}','cancionController@show');
 
 
 Route::get('/editarAlbum','albumController@index');
 Route::post('/editarAlbum/add', 'albumController@store');
 
-Route::get('/usuarioDetalle/{id}', 'usuarioController@edit');
-Route::post('/usuarioDetalle/{id}', 'usuarioController@update_avatar');
+
+
+Route::get('/ajustes', 'usuarioController@edit')->name('ajustes');
+Route::post('/ajustes', 'usuarioController@update_avatar');
+
+
+Route::get('/usuarioDetalle', 'usuarioController@edit');
 
 //-----------------------------------------------------------
 
@@ -48,9 +55,9 @@ Route::get('/artista', function () {
 Route::get('/album', function () {
     return view('pages.album');
 });
-Route::get('/actualizarPerfil', function () {
+/*Route::get('/actualizarPerfil', function () {
     return view('pages.actualizarPerfil');
-});
-Route::get('/cancion', function () {
+});*/
+/*Route::get('/cancion', function () {
     return view('pages.cancion');
-});
+});*/

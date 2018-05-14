@@ -17,7 +17,7 @@ class CreateAlbumsTable extends Migration
             $table->increments('id');
             $table->string('nombre');
             $table->year('anio');
-            //Anadir ruta de la portada o como sea que se agregue
+            $table->string('cover')->default('cover.png');
             $table->timestamps();
         });
     }

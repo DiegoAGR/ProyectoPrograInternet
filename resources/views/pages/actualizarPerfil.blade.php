@@ -4,14 +4,14 @@
 @section('content')
 
 <div class="row justify-content-md-center">
-    
+
     <div class="col-xl-6 col-lg-7 col-md-9">
         <div class="card">
         <div class="card-body">
-            <img class="img-fluid d-block mx-auto" width="220" height="220" src="http://placehold.it/200x200&text=Logo" alt="">
+            <img class="img-fluid d-block mx-auto" width="220" height="220" src="/subidas/avatars/{{ $usuario->avatar }}" alt="">
         </div>
         <div class="card-body">
-            
+
         <form>
             <div class="form-group row">
                 <label for="inputNick" class="col-sm-3 col-form-label">Nickname</label>
