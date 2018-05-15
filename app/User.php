@@ -25,6 +25,18 @@ class User extends Authenticatable
         'nombre', 'nickname' , 'correoElectronico' , 'password',
     ];
 
+    //Aaccesor para cambiar la primera letra a mayuscula del atributo que se mande
+    public function getPrimerLetraMayus($value)
+    {
+     return ucfirst($value);
+    }
+
+    //Setteador de nicknames a minusculas para practicidad en base de datos
+    public function setNicknameMinus($value)
+    {
+      $this->attributes['nickname'] = strtolower($value);
+    }
+
     /**
      * The attributes that should be hidden for arrays.
      *

@@ -26,6 +26,7 @@ class CreateSongsTable extends Migration
 
           $table->time('duracion');
           $table->timestamps();
+          $table->softDeletes();
         });
     }
 

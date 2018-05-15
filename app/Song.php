@@ -33,4 +33,5 @@ public function usuarios()
 
 
   protected $table = 'songs';
+  protected $dates = ['deleted_at'];
 }
