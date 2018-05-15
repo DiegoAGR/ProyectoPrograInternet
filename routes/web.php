@@ -48,13 +48,31 @@ Route::get('/usuarioDetalle', 'usuarioController@edit');
 
 Route::get('/buscar', function () {
     return view('pages.buscar');
-});
+})->name('buscar');
 Route::get('/artista', function () {
     return view('pages.artista');
 });
 Route::get('/album', function () {
     return view('pages.album');
 });
+Route::get('/admin/canciones', function () {
+    return view('pages.admin.listaCanciones');
+})-> name('administrarCanciones');
+Route::get('/admin/albums', function () {
+    return view('pages.admin.listaAlbums');
+})-> name('administrarAlbums');
+Route::get('/admin/artistas', function () {
+    return view('pages.admin.listaArtistas');
+})-> name('administrarArtistas');
+Route::get('/admin/canciones/agregar', function () {
+    return view('pages.admin.agregarCanciones');
+})-> name('adminAgregarCanciones');
+Route::get('/admin/albums/agregar', function () {
+    return view('pages.admin.agregarAlbums');
+})-> name('adminAgregarAlbums');
+Route::get('/admin/artistas/agregar', function () {
+    return view('pages.admin.agregarArtistas');
+})-> name('adminAgregarArtistas');
 /*Route::get('/actualizarPerfil', function () {
     return view('pages.actualizarPerfil');
 });*/
