@@ -18,6 +18,8 @@ class CreateAlbumsTable extends Migration
             $table->string('nombre');
             $table->year('anio');
             $table->string('cover')->default('cover.png');
+            $table->integer('artista_id')->unsigned();
+            $table->foreign('artista_id')->references('id')->on('artistas');
             $table->timestamps();
         });
     }

@@ -14,17 +14,23 @@
         <a class="nav-link" href="#">Motor de busqueda
         </a>
         </li>
-        <li class="nav-item active">
+        <li class="collapse navbar-collapse">
         <a class="nav-link" href="{{route('perfil')}}">Perfil
             <span class="sr-only">(current)</span>
         </a>
         </li>
 
-        <li class="nav-item active">
+        <li class="collapse navbar-collapse">
         <a class="nav-link" href="{{route('ajustes')}}">Ajustes
-            <span class="sr-only">(current)</span>
         </a>
         </li>
+
+        <li class="collapse navbar-collapse">
+        <a class="nav-link" href="{{route('salir')}}">Salir
+        </a>
+        </li>
+
+
     </ul>
     </div>
 </div>

@@ -60,7 +60,10 @@ class albumController extends Controller
      */
     public function show($id)
     {
-        //
+      $album = Album::find($id);
+
+      return view('pages.album',compact('album'));
+
     }
 
     /**

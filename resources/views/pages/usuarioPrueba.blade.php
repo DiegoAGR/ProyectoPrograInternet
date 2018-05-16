@@ -79,8 +79,11 @@
             <div class="media-body">
                 <h5 class="mt-0">{{$usuario->nombre}}</h5>
                 Breve descripcion de mi ser~
+                <hr>
             </div>
         </div>
+
+
     </div>
 </div>
 <!-- /.row -->

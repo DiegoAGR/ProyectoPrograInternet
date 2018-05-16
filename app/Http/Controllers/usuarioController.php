@@ -109,4 +109,10 @@ class usuarioController extends Controller
     {
         User::find($id);
     }
+
+    public function salir()
+    {
+      Auth::logout();
+      return redirect ('home');
+    }
 }

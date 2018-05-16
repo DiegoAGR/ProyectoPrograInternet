@@ -23,6 +23,7 @@ class CrearTablaUsuarios extends Migration
           $table->timestamps();
           $table->integer('idBiblioteca')->nullable();
           $table->string('avatar')->default('default.jpg');
+          $table->integer('rol')->default(2);
         });
     }
 

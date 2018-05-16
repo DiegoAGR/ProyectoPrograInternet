@@ -8,9 +8,9 @@
     <div class="col-lg-3">
         <!-- Search Widget -->
         <div class="card my-4">
-            <h5 class="card-header">Artista</h5>
+            <h5 class="card-header">Artista: {{$album->artista->nombre}}</h5>
             <div class="card-body">
-                <img class="img-fluid d-block mx-auto" src="http://placehold.it/200x200&text=Logo" alt="">
+                <img class="img-fluid d-block mx-auto" src="/subidas/covers/{{$album->cover}}" alt="">
             </div>
         </div>
     </div>
@@ -19,16 +19,19 @@
     <div class="col-lg-9">
 
         <!-- Title -->
-        <h1 class="mt-4">Albúm</h1>
+        <h1 class="mt-4">Albúm: {{$album->nombre}}</h1>
 
         <hr>
         <br>
 
         <!-- Lista de canciones -->
         <ul class="list-group">
-            <li class="list-group-item"><a href="#" class="card-link">Canción 1</a></li>
-            <li class="list-group-item"><a href="#" class="card-link">Canción 2</a></li>
-            <li class="list-group-item"><a href="#" class="card-link">Canción 3</a></li>
+
+        @foreach ($album->canciones as $cancion)
+          <tr>
+          <li class="list-group-item"><a href="/cancion/{{$cancion->id}}" class="card-link">{{$cancion->titulo}}</a></li>
+          </tr>
+        @endforeach
         </ul>
 
     </div>
