@@ -30,12 +30,10 @@ Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
 
-
 Route::get('/admin/canciones/agregar','cancionController@create')->name('adminAgregarCanciones');
 Route::post('/admin/canciones/agregar','cancionController@store');
 
 Route::get('/cancion/{id}','cancionController@show');
-
 
 Route::get('/editarAlbum','albumController@index')->middleware('admin');
 Route::post('/editarAlbum/add', 'albumController@store');
@@ -46,6 +44,7 @@ Route::get('/ajustes', 'usuarioController@edit')->name('ajustes');
 Route::post('/ajustes', 'usuarioController@update_avatar');
 
 Route::get('/usuarioDetalle', 'usuarioController@edit');
+Route::post('/usuarioDetalle', 'usuarioController@update');
 
 Route::get('/salirrrrrrrrrrr', 'usuarioController@salir')->name('salir');
 

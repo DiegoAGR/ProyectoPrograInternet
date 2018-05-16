@@ -69,22 +69,6 @@ class usuarioController extends Controller
       return view('pages.actualizarPerfil',compact('usuario'));
     }
 
-    public function update_avatar(Request $request){
-
-     if($request->hasFile('avatar')){
-
-       $avatar = $request->file('avatar');
-       $filename = time() . '.' . $avatar->getClientOriginalExtension();
-       Image::make($avatar)->resize(300, 300)->save( public_path('/subidas/avatars/' . $filename ) );
-       //$user = Auth::user();
-       $user =User::find(1);
-       $user->avatar = $filename;
-       $user->save();
-     }
-     return view('detalleUsuario',compact('user'));
-   }
-
-
     /**
      * Update the specified resource in storage.
      *
@@ -92,9 +76,25 @@ class usuarioController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(Request $request)
     {
-        //
+      $usuario = Auth::User();
+      if($request->hasFile('inputImagen')){
+
+        $avatar = $request->file('inputImagen');
+        $filename = time() . '.' . $avatar->getClientOriginalExtension();
+        Image::make($avatar)->resize(300, 300)->save( public_path('/subidas/avatars/' . $filename ) );
+        $usuario->avatar = $filename;
+      }
+
+      if(!isset($request->nickname))
+      {
+        $usuario->nickname = $request->inputNick;
+      }
+
+      $usuario->save();
+
+      return view('pages.usuarioPrueba',compact('usuario'));
     }
 
     /**
