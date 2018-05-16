@@ -35,7 +35,7 @@
 
 
                 <div class="form-group">
-                  <label for="inputArtista" class="col-sm-3 col-form-label">Artista</label>
+                  <label>Artista</label>
                   <select class="form-control" name="artista">
                     @foreach($artistas as $artista)
                     <option value="{{$artista->nombre}}">{{$artista->nombre}}</option>
@@ -45,7 +45,8 @@
 
 
                 <div class="form-group">
-                  <select class="form-control" name="genero">
+                  <label > Genero</label>
+                  <select class="form-control" name="genero_id">
                     @foreach($generos as $genero)
                     <option value="{{$genero->id}}">{{$genero->nombre}}</option>
                     @endforeach
@@ -53,7 +54,7 @@
                 </div>
 
                 <div class="form-group">
-                  <select class="form-control" name="duracion">
+                    <label>Duracion</label>
                     <input type="time" name="duracion">
                   </div>
 

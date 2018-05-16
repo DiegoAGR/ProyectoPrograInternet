@@ -15,7 +15,8 @@ class cancionController extends Controller
      */
     public function index()
     {
-        //
+        $canciones = Song::all();
+        return view('pages.admin.listaCanciones',compact('canciones'));
     }
 
     /**
@@ -43,13 +44,13 @@ class cancionController extends Controller
       $cancion = new Song;
       $cancion->titulo = $request->titulo;
       $cancion->artista = $request->artista;
-      $cancion->album = 7;
-      $cancion->genero = $request->genero;
+      $cancion->album_id = '10';
+      $cancion->genero_id = $request->genero_id;
       $cancion->duracion = $request->duracion;
 
       $cancion->save();
 
-
+      return redirect()->back();
     }
 
     /**

@@ -34,11 +34,14 @@
                         </tr>
                         </thead>
                         <tbody>
-                        <tr>
-                            <td> Cancion </td>
-                            <td> Artista  </td>
-                            <td> <a href="#" class="mr-4">Editar</a> <a href="#">Borrar</a> </td>
-                        </tr>
+                          @foreach($canciones as $cancion)
+                          <tr>
+                              <td> {{$cancion->titulo}} </td>
+                              <td> {{$cancion->artista}}  </td>
+                              <td> <a href="#" class="mr-4">Editar</a> <a href="#">Borrar</a> </td>
+                          </tr>
+                          @endforeach
+
                         </tbody>
                     </table>
                 </div>

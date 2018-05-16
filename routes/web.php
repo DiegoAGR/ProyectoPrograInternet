@@ -37,7 +37,6 @@ Route::post('/admin/canciones/agregar','cancionController@store');
 Route::get('/cancion/{id}','cancionController@show');
 
 
-
 Route::get('/editarAlbum','albumController@index')->middleware('admin');
 Route::post('/editarAlbum/add', 'albumController@store');
 
@@ -50,8 +49,7 @@ Route::get('/usuarioDetalle', 'usuarioController@edit');
 
 Route::get('/salirrrrrrrrrrr', 'usuarioController@salir')->name('salir');
 
-
-
+Route::get('/admin/canciones', 'cancionController@index')->name('administrarCanciones');
 
 
 
@@ -67,10 +65,6 @@ Route::get('/artista', function () {
 Route::get('/album', function () {
     return view('pages.album');
 });
-
-Route::get('/admin/canciones', function () {
-    return view('pages.admin.listaCanciones');
-})-> name('administrarCanciones');
 
 Route::get('/admin/albums', function () {
     return view('pages.admin.listaAlbums');
