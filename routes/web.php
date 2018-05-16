@@ -31,8 +31,11 @@ Auth::routes();
 Route::get('/home', 'HomeController@index')->name('home');
 
 
-Route::get('/CrearCancion','cancionController@create');
+Route::get('/admin/canciones/agregar','cancionController@create')->name('adminAgregarCanciones');
+Route::post('/admin/canciones/agregar','cancionController@store');
+
 Route::get('/cancion/{id}','cancionController@show');
+
 
 
 Route::get('/editarAlbum','albumController@index')->middleware('admin');
@@ -49,6 +52,9 @@ Route::get('/salirrrrrrrrrrr', 'usuarioController@salir')->name('salir');
 
 
 
+
+
+
 //-----------------------------------------------------------
 
 
@@ -61,24 +67,29 @@ Route::get('/artista', function () {
 Route::get('/album', function () {
     return view('pages.album');
 });
+
 Route::get('/admin/canciones', function () {
     return view('pages.admin.listaCanciones');
 })-> name('administrarCanciones');
+
 Route::get('/admin/albums', function () {
     return view('pages.admin.listaAlbums');
 })-> name('administrarAlbums');
+
 Route::get('/admin/artistas', function () {
     return view('pages.admin.listaArtistas');
 })-> name('administrarArtistas');
-Route::get('/admin/canciones/agregar', function () {
-    return view('pages.admin.agregarCanciones');
-})-> name('adminAgregarCanciones');
+
 Route::get('/admin/albums/agregar', function () {
     return view('pages.admin.agregarAlbums');
 })-> name('adminAgregarAlbums');
+
+
 Route::get('/admin/artistas/agregar', function () {
     return view('pages.admin.agregarArtistas');
 })-> name('adminAgregarArtistas');
+
+
 /*Route::get('/actualizarPerfil', function () {
     return view('pages.actualizarPerfil');
 });*/

@@ -14,6 +14,7 @@
         </div>
     </div>
 
+
     <!-- Post Content Column -->
     <div class="col-lg-9">
         <div class="row mt-4">
@@ -21,44 +22,48 @@
         </div>
         <div class="row card mb-3 mt-4">
             <div class="card-body">
+              <form method="POST" action="/admin/canciones/agregar" accept-charset="UTF-8" enctype="multipart/form-data">
+                  <input type="hidden" name="_token" value="{{ csrf_token() }}">
 
             <form>
                 <div class="form-group row">
-                    <label for="inputNick" class="col-sm-3 col-form-label">Nickname</label>
+                    <label for="inputTitulo" class="col-sm-3 col-form-label">Titulo</label>
                     <div class="col-sm-9">
-                    <input type="text" class="form-control" id="inputNick" placeholder="Nickname">
+                    <input type="text" class="form-control" name="titulo">
                     </div>
                 </div>
-    
-                <div class="form-group row">
-                    <label for="inputImagen" class="col-sm-3 col-form-label">Imagen Perfil</label>
-                    <div class="col-sm-9">
-                        <div class="custom-file">
-                        <input type="file" class="custom-file-input" id="inputImagen" lang="es">
-                        <label class="custom-file-label" for="customFileLang">Seleccionar Archivo</label>
-                        </div>
-                    </div>
+
+
+                <div class="form-group">
+                  <label for="inputArtista" class="col-sm-3 col-form-label">Artista</label>
+                  <select class="form-control" name="artista">
+                    @foreach($artistas as $artista)
+                    <option value="{{$artista->nombre}}">{{$artista->nombre}}</option>
+                    @endforeach
+                  </select>
                 </div>
-                <hr>
-                <div class="form-group row">
-                    <label for="inputPassword" class="col-sm-3 col-form-label">Contraseña</label>
-                    <div class="col-sm-9">
-                    <input type="password" class="form-control" id="inputPassword" placeholder="Contraseña">
-                    </div>
+
+
+                <div class="form-group">
+                  <select class="form-control" name="genero">
+                    @foreach($generos as $genero)
+                    <option value="{{$genero->id}}">{{$genero->nombre}}</option>
+                    @endforeach
+                  </select>
                 </div>
-                <div class="form-group row">
-                    <label for="inputPassword" class="col-sm-3 col-form-label">Confirmar</label>
-                    <div class="col-sm-9">
-                    <input type="password" class="form-control" id="inputPassword" placeholder="Contraseña">
-                    </div>
-                </div>
+
+                <div class="form-group">
+                  <select class="form-control" name="duracion">
+                    <input type="time" name="duracion">
+                  </div>
+
                 <div class="form-group row">
                     <div class="col-sm-9 offset-sm-3">
                     <button type="submit" class="btn btn-dark btn-block">Agregar</button>
                     </div>
                 </div>
             </form>
-    
+
             </div>
         </div>
     </div>

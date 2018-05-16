@@ -26,7 +26,9 @@ class cancionController extends Controller
     public function create()
     {
       $generos = DB::table('generos')->get();
-      return view('cancionCrear',['generos' =>$generos]);
+      $artistas = DB::table('artistas')->get();
+      return view('pages.admin.agregarCanciones',['generos' =>$generos],['artistas' =>$artistas]);
+
     }
 
     /**
@@ -37,7 +39,17 @@ class cancionController extends Controller
      */
     public function store(Request $request)
     {
-        //
+
+      $cancion = new Song;
+      $cancion->titulo = $request->titulo;
+      $cancion->artista = $request->artista;
+      $cancion->album = 7;
+      $cancion->genero = $request->genero;
+      $cancion->duracion = $request->duracion;
+
+      $cancion->save();
+
+
     }
 
     /**

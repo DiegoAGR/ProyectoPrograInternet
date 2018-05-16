@@ -18,7 +18,6 @@ class usuarioController extends Controller
     {
       $users = User::all();
 
-      //dd($users);
       return view('listadoUsuarios',compact('users'));
 
     }
