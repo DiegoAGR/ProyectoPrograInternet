@@ -27,3 +27,6 @@ El sistema cuenta con 2 usuarios: el usuario general y el administrador. Para ca
 1. Abrir la aplicación de Laragon y dar en el boton de play para ejecutar Laravel.
 
 El último  paso se debe de ejecutar cada vez que el servidor sea reiniciado.
+
+## Imágenes del Sistema
+![Usuario](/img02.png)
