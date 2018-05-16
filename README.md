@@ -4,17 +4,17 @@ Esta aplicación web fue diseñada para la materia de Programación para Interne
 
 En general se buscó crear un prototipo similar a https://www.last.fm/ (de ahí el nombre de first.fm). Esta aplicación web guarda canciones, las cuales pertenecen a un álbum y a su vez son creadas por artistas. En general está organizado de la siguiente forma:
 
-*Artista
-  *Álbum
-    *Canción
-    *Canción
-  *Álbum
-    *Canción
-*Artista
-  *Álbum
-    *Canción
-    *Canción
-    *Canción
+* Artista
+  * Álbum
+    * Canción
+    * Canción
+  * Álbum
+    * Canción
+* Artista
+  * Álbum
+    * Canción
+    * Canción
+    * Canción
 
 El sistema cuenta con 2 usuarios: el usuario general y el administrador. Para cada tipo de usuario se desarrolló un Middleware.
 
