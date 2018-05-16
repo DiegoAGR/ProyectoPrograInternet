@@ -40,8 +40,6 @@
             </thead>
             <tbody>
 
-
-
             @foreach ($usuario->songs as $song)
             <tr>
 
