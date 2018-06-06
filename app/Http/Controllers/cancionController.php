@@ -99,6 +99,7 @@ class cancionController extends Controller
      */
     public function destroy($id)
     {
-        //
+        $c = Song::find($id);
+        $c->delete();
     }
 }

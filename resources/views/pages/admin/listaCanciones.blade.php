@@ -38,7 +38,7 @@
                           <tr>
                               <td> {{$cancion->titulo}} </td>
                               <td> {{$cancion->artista}}  </td>
-                              <td> <a href="#" class="mr-4">Editar</a> <a href="#">Borrar</a> </td>
+                              <td> <a href="#" class="mr-4">Editar</a> <a href="{{ action('cancionController@destroy') }}">Borrar</a> </td>
                           </tr>
                           @endforeach
 
