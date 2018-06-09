@@ -12,7 +12,7 @@ class Song extends Model
 
   public function genero()
   {
-   return $this->hasOne('App\genero','id');
+   return $this->hasOne('App\Genero','id');
   }
 
   public function album()
