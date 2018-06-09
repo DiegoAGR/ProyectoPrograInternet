@@ -8,7 +8,7 @@
     <div class="col-lg-3">
         <!-- Search Widget -->
         <div class="card my-4">
-            <h5 class="card-header">Albúm  <strong> {{$song->Album->nombre}} </strong> </h5>
+            <h5 class="card-header">Albúm  <strong> {{$song->album->nombre}} </strong> </h5>
             <div class="card-body">
                 <img class="img-fluid d-block mx-auto" src="/subidas/covers/{{ $song->album->cover }}" alt="">
             </div>

@@ -92,7 +92,6 @@ class usuarioController extends Controller
       {
         $usuario->nickname = $request->inputNick;
       }
-
       $usuario->save();
 
       return view('pages.usuarioPrueba',compact('usuario'));
