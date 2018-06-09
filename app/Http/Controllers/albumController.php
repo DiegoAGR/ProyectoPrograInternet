@@ -13,7 +13,10 @@ class albumController extends Controller
      */
     public function index()
     {
-        return view('subirArchivos');
+      $albums = Album::All();
+
+      return view('pages.indiceAlbums',compact('albums'));
+
     }
 
     /**

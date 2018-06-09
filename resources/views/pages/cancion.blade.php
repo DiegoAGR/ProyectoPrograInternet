@@ -17,7 +17,9 @@
                 <li class="list-group-item list-group-item-dark">Canción Actual</li>
                 <li class="list-group-item"><a href="#" class="card-link">Canción 3</a></li>
             </ul>
+
         </div>
+
     </div>
 
     <!-- Post Content Column -->
@@ -35,7 +37,13 @@
             <li class="list-group-item">Mas info</li>
         </ul>
         <br>
-        <button type="submit" class="btn btn-dark btn-lg btn-block">Escuchar (no hace nada :v)</button>
+
+
+
+        <audio controls>
+          <source src="/subidas/canciones/{{$song->id}}.mp3" type="audio/mpeg">
+        Your browser does not support the audio element.
+        </audio>
         <br>
         <br>
         <br>

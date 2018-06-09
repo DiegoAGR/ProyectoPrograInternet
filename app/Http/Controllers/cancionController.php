@@ -16,7 +16,8 @@ class cancionController extends Controller
     public function index()
     {
         $canciones = Song::all();
-        return view('pages.admin.listaCanciones',compact('canciones'));
+        return view('pages.indiceCanciones',compact('canciones'));
+        //return view('pages.admin.listaCanciones',compact('canciones'));
     }
 
     /**

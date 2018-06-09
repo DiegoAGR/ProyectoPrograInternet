@@ -25,7 +25,7 @@ class User extends Authenticatable
         'nombre', 'nickname' , 'correoElectronico' , 'password',
     ];
 
-    //Aaccesor para cambiar la primera letra a mayuscula del atributo que se mande
+    //Accesor para cambiar la primera letra a mayuscula del atributo que se mande
     public function getPrimerLetraMayus($value)
     {
      return ucfirst($value);

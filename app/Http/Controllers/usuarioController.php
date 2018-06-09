@@ -79,6 +79,7 @@ class usuarioController extends Controller
     public function update(Request $request)
     {
       $usuario = Auth::User();
+    //  dd($usuario);
       if($request->hasFile('inputImagen')){
 
         $avatar = $request->file('inputImagen');
@@ -87,7 +88,7 @@ class usuarioController extends Controller
         $usuario->avatar = $filename;
       }
 
-      if(!isset($request->nickname))
+      if(!($request->nickname==NULL))
       {
         $usuario->nickname = $request->inputNick;
       }

@@ -48,11 +48,15 @@ Route::post('/usuarioDetalle', 'usuarioController@update');
 
 Route::get('/salirrrrrrrrrrr', 'usuarioController@salir')->name('salir');
 
-Route::get('/admin/canciones', 'cancionController@index')->name('administrarCanciones');
+//Route::get('/admin/canciones', 'cancionController@index')->name('administrarCanciones');
+
+Route::get('/indiceCanciones', 'cancionController@index')->name('indiceCanciones');
 
 
 
-//-----------------------------------------------------------
+
+
+//-----------------------------------------------------------//
 
 
 Route::get('/buscar', function () {
@@ -81,6 +85,14 @@ Route::get('/admin/albums/agregar', function () {
 Route::get('/admin/artistas/agregar', function () {
     return view('pages.admin.agregarArtistas');
 })-> name('adminAgregarArtistas');
+
+
+Route::get('/indiceAlbums', function () {
+    return view('pages.indiceAlbums');
+})-> name('indiceAlbums');
+
+
+
 
 
 /*Route::get('/actualizarPerfil', function () {
