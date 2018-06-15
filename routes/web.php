@@ -91,6 +91,9 @@ Route::get('/indiceAlbums', function () {
     return view('pages.indiceAlbums');
 })-> name('indiceAlbums');
 
+Route::get('/listaAlbumes', function () {
+    return view('pages.listaAlbumes');
+})-> name('indiceAlbumes');
 
 
 

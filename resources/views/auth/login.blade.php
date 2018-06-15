@@ -1,8 +1,18 @@
 @extends('layouts.app')
 
 @section('content')
+
+
 <div class="container">
     <div class="row justify-content-center">
+      @if(!empty($errors->first()))
+          <div class="row col-lg-12">
+              <div class="alert alert-danger">
+                  <span>{{ $errors->first() }}</span>
+              </div>
+          </div>
+      @endif
+
         <div class="col-md-8">
             <div class="card">
                 <div class="card-header">{{ __('Acceso') }}</div>
@@ -10,6 +20,8 @@
                 <div class="card-body">
                     <form method="POST" action="{{ route('login') }}">
                         @csrf
+
+
 
                         <div class="form-group row">
                             <label for="correoElectronico" class="col-sm-4 col-form-label text-md-right">{{ __('Correo Electronico') }}</label>
