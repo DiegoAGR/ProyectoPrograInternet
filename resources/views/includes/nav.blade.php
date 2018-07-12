@@ -10,6 +10,11 @@
 
     <div class="collapse navbar-collapse" id="navbarResponsive">
     <ul class="navbar-nav ml-auto">
+      <li class="nav-item">
+      <a class="nav-link" href="{{route('indiceArtistas')}}">Catálogo
+      </a>
+      </li>
+
         <li class="nav-item">
         <a class="nav-link" href="#">Motor de busqueda
         </a>

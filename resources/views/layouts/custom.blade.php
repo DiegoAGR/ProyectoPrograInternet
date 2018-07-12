@@ -1,5 +1,4 @@
 <!DOCTYPE html>
-
 <html lang="{{ app()->getLocale() }}">
 <head>
     <meta charset="utf-8">
@@ -15,6 +14,7 @@
 
       <!-- Bootstrap core CSS -->
     <link href="{{ asset('vendor/bootstrap/css/bootstrap.min.css') }}" rel="stylesheet">
+    <link rel="shortcut icon" href="{{ asset('favicon.ico') }}">
 
     <!-- Custom styles for this template -->
     <link href="{{ asset('css/style.css') }}" rel="stylesheet">

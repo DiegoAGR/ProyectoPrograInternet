@@ -54,6 +54,7 @@ Route::get('/salirrrrrrrrrrr', 'usuarioController@salir')->name('salir');
 Route::get('/indiceCanciones', 'cancionController@index')->name('indiceCanciones');
 
 
+Route::get('/indiceArtistas','artistaController@index')-> name('indiceArtistas');
 
 
 
@@ -88,9 +89,6 @@ Route::get('/admin/artistas/agregar', function () {
 })-> name('adminAgregarArtistas');
 
 
-Route::get('/indiceAlbums', function () {
-    return view('pages.indiceAlbums');
-})-> name('indiceAlbums');
 
 Route::get('/listaAlbumes', function () {
     return view('pages.listaAlbumes');

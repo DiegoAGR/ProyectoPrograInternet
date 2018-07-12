@@ -30,6 +30,9 @@ public function usuarios()
   return $this->belongsToMany('App\User');
 }
 
+    public function getTituloAttribute($value) {
+        return ucfirst($value);
+    }
 
 
   protected $table = 'songs';
