@@ -1,4 +1,4 @@
-@extends('layouts.app')
+@extends('layouts.customInvitados')
 
 @section('content')
 <div class="container">

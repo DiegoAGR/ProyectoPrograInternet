@@ -1,12 +1,15 @@
-@extends('layouts.app')
+@extends('layouts.customInvitados')
 
 @section('content')
 
 
 <div class="container">
+
     <div class="row justify-content-center">
+
+
       @if(!empty($errors->first()))
-          <div class="row col-lg-12">
+          <div class="container">
               <div class="alert alert-danger">
                   <span>{{ $errors->first() }}</span>
               </div>
@@ -29,11 +32,7 @@
                             <div class="col-md-6">
                                 <input id="correoElectronico" type="email" class="form-control{{ $errors->has('correoElectronico') ? ' is-invalid' : '' }}" name="correoElectronico" value="{{ old('correoElectronico') }}" required autofocus>
 
-                                @if ($errors->has('correoElectronico'))
-                                    <span class="invalid-feedback">
-                                        <strong>{{ $errors->first('correoElectronico') }}</strong>
-                                    </span>
-                                @endif
+
                             </div>
                         </div>
 
@@ -56,7 +55,7 @@
                             <div class="col-md-6 offset-md-4">
                                 <div class="checkbox">
                                     <label>
-                                        <input type="checkbox" name="remember" {{ old('remember') ? 'checked' : '' }}> {{ __('Remember Me') }}
+                                        <input type="checkbox" name="remember" {{ old('remember') ? 'checked' : '' }}> {{ __('Mantenerme logeado') }}
                                     </label>
                                 </div>
                             </div>
@@ -70,7 +69,7 @@
                                 </button>
 
                                 <a class="btn btn-link" href="{{ route('password.request') }}">
-                                    {{ __('Forgot Your Password?') }}
+                                    {{ __('Contraseña Olvidada?') }}
                                 </a>
                             </div>
                         </div>

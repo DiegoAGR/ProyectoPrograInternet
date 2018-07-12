@@ -28,6 +28,7 @@ Route::get('/pUsuario', 'usuarioController@show')->name('perfil')->middleware('a
 Auth::routes();
 
 
+
 Route::get('/home', 'HomeController@index')->name('home');
 
 Route::get('/admin/canciones/agregar','cancionController@create')->name('adminAgregarCanciones');

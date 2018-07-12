@@ -50,20 +50,14 @@ class RegisterController extends Controller
     {
         return Validator::make($data, [
             'nombre' => 'required|string|max:30',
-            'nickname' => 'required|string|max:40',
+            'nickname' => 'required|string|max:20|unique:usuarios',
             'correoElectronico' => 'required|string|email|max:255|unique:usuarios',
             'password' => 'required|confirmed|string|min:6',
 
         ]);
     }
 
-    public function messages()
-    {
-    return [
-        'nombre.required' => 'Es necesario un nombre',
-        'password.required'  => 'La constrase;a es incorrecta',
-    ];
-    }
+    
 
     /**
      * Create a new user instance after a valid registration.
