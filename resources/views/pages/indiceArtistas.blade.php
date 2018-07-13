@@ -19,8 +19,10 @@
                  @foreach($artistas as $artista)
                  <tr>
                      <td> {{$artista->nombre}} </td>
+                    <td>  <a href="/listaAlbumes/{{$artista->id}}">Escuchar</a></td>
                  </tr>
                  @endforeach
+
                </tbody>
              </table>
 

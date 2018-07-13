@@ -64,7 +64,6 @@ class cancionController extends Controller
     {
 
       $song = Song::find($id);
-
       return view('pages.cancion',compact('song'));
 
     }

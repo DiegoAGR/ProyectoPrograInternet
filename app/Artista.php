@@ -10,6 +10,11 @@ class Artista extends Model
       'nombre','pais'
   ];
 
+  public function Albumes()
+ {
+     return $this->hasMany('App\Album');
+ }
+
   protected $table = 'artistas';
 
 }

@@ -46,7 +46,8 @@ class artistaController extends Controller
      */
     public function show($id)
     {
-        //
+      $artista = Artista::find($id);
+      return view('pages.listaAlbumes',compact('artista'));
     }
 
     /**

@@ -13,7 +13,7 @@
 
       <div class="row">
         <div class="column">
-          <img src="/subidas/artistas/default.jpg" class="rounded" alt="">
+          <img src="/subidas/artistas/{{$artista->foto}}" class="rounded" alt="">
         </div>
 
         <div class="column">
@@ -22,49 +22,46 @@
        <tbody>
          <tr>
            <td>Nombre: </td>
-           <td> </td>
+           <td> {{$artista->nombre}} </td>
          </tr>
 
          <tr>
            <td>Pais: </td>
-           <td></td>
+           <td>{{$artista->pais}}</td>
 
          </tr>
          <tr>
-           <td>A;o:</td>
+           <td>Año: </td>
            <td></td>
-           
+
          </tr>
+
        </tbody>
+
      </table>
-
-        </div>
-
+     <hr>
       </div>
-
-
-
+      </div>
       <hr>
-
-
-
 
       <div class="row text-center text-lg-left">
 
-        <div class="col-lg-3 col-md-4 col-xs-6">
-          <a href="#" class="d-block mb-4 h-100">
-            <img class="img-fluid img-thumbnail" src="/subidas/covers/cover.png" alt="">
-          </a>
-        </div>
 
-        @for ($i = 0; $i < 10; $i++)
-          The current value is {{ $i }}
+
+        @foreach($artista->albumes as $album)
+        <tr>
+
           <div class="col-lg-3 col-md-4 col-xs-6">
+            <td> {{$album->nombre}} </td>
+
             <a href="#" class="d-block mb-4 h-100">
               <img class="img-fluid img-thumbnail" src="/subidas/covers/cover.png" alt="">
             </a>
           </div>
-        @endfor
+
+        </tr>
+        @endforeach
+
       </div>
 
     </div>
