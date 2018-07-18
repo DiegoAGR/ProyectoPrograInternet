@@ -23,6 +23,10 @@ class Album extends Model
       return $this->hasOne('App\Artista','id');
     }
 
+    public function getNombreAttribute($value) {
+        return ucfirst($value);
+    }
+
   protected $fillable = [
       'nombre','anio'
   ];

@@ -94,6 +94,6 @@ Route::get('/admin/artistas/agregar', function () {
 /*Route::get('/actualizarPerfil', function () {
     return view('pages.actualizarPerfil');
 });*/
-/*Route::get('/cancion', function () {
-    return view('pages.cancion');
-});*/
+Route::get('/cancionCrear', function () {
+    return view('cancionCrear');
+});

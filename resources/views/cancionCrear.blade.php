@@ -1,24 +1,19 @@
+@extends('layouts.custom')
+@section('pageTitle', 'Canción')
+
+@section('content')
 <!DOCTYPE HTML>
 <html>
 <body>
 
-<form action="welcome_get.php" method="get">
-Titulo: <input type="text" name="name"><br>
-Artista: <input type="text" name="email"><br>
-Album: <input type="text" name="email"><br>
+<form method="POST" action="">
 
-
-<select name="genero_musical" >
-  @foreach ($generos as $genero):
-  <option value=" {{ $genero->nombre }}"> {{ $genero->nombre }}</option>
-  @endforeach
-
-
-<input type="submit">
-
-
+  <label for="exampleFormControlFile1">Example file input</label>
+     <input type="file" class="form-control-file" id="exampleFormControlFile1">
 
 </form>
 
 </body>
 </html>
+
+@endsection

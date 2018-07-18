@@ -49,21 +49,6 @@
         <br>
         <br>
 
-        <!-- Comments Form -->
-        <div class="card my-4">
-        <h5 class="card-header">Deja un comentario:</h5>
-        <div class="card-body">
-            <form method="POST" action="/cancion/{{$song->id}}/comentarios">
-              {{ csrf_field() }}
-            <div class="form-group">
-                <textarea name="texto" class="form-control" rows="3"></textarea>
-            </div>
-            <input type="hidden" value="{{$song->id}}" name="song_id" />
-            <input type="hidden" value="App\Song" name="type" />
-            <button type="submit" class="btn btn-primary">Enviar</button>
-            </form>
-        </div>
-        </div>
 
         <!-- Single Comment -->
                 @foreach ($song->comentarios->reverse() as $comentario)
@@ -72,14 +57,36 @@
                   <div class="media-body">
                   <h5 class="mt-0">Usuario</h5>
                    {{$comentario->created_at->diffForHumans()}}
+                   <a href="#"> Borrar</a>
+
                   <hr>
                   {{ $comentario->texto }}
                   <br> </br>
                 </div>
               </div>
                 @endforeach
+
+
+                <!-- Comments Form -->
+                <div class="card my-4">
+                <h5 class="card-header">Deja un comentario:</h5>
+                <div class="card-body">
+                    <form method="POST" action="/cancion/{{$song->id}}/comentarios">
+                      {{ csrf_field() }}
+                    <div class="form-group">
+                        <textarea name="texto" placeholder="Escribe tu comentario aqui." class="form-control" rows="4"></textarea>
+                    </div>
+                    <input type="hidden" value="{{$song->id}}" name="song_id" />
+                    <input type="hidden" value="App\Song" name="type" />
+                    <button type="submit" class="btn btn-primary">Enviar</button>
+                    </form>
+                </div>
+                </div>
     </div>
 </div>
+
+
+
 <!-- /.row -->
 
 @endsection
