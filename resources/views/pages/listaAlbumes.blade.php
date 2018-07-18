@@ -7,7 +7,7 @@
 
     <!-- Page Content -->
     <div class="container">
-      <!-- Investigar como hacer lo de float en css*/ -->
+      <!-- Investigar como hacer lo de float en css -->
 
       <h1 class="my-16 text-center text-lg-left">Pagina del artista</h1>
 

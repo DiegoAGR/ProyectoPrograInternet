@@ -9,14 +9,13 @@ use Illuminate\Database\Eloquent\SoftDeletes;
 class Comentario extends Model
 {
 
-      public function commentable()
-     {
-         return $this->morphTo();
-     }
-
+public function commentable()
+{
+   return $this->morphTo();
+}
 
     protected $fillable = [
-      'texto',''
+      'texto','commentable_type','commentable_id'
     ];
 
     protected $table = 'comentarios';

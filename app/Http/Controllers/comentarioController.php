@@ -3,7 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\Comentarios;
+use App\Comentario;
 
 class comentarioController extends Controller
 {
@@ -35,12 +35,15 @@ class comentarioController extends Controller
      */
     public function store(Request $request)
     {
-      //En la forma donde se manda a llamara el store, se definen como se llaman los campos del request
-      $coment = new Comentario;
-      $coment->texto = $request->texto;
+      Comentario::create([
+        'texto' => request('texto'),
+        'commentable_id' => request('song_id'),
+        'commentable_type' => request('type')
 
-      $coment->save();
+        ]
+      );
 
+      return back();
     }
 
     /**

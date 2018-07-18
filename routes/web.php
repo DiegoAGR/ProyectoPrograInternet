@@ -35,6 +35,7 @@ Route::get('/admin/canciones/agregar','cancionController@create')->name('adminAg
 Route::post('/admin/canciones/agregar','cancionController@store');
 
 Route::get('/cancion/{id}','cancionController@show');
+Route::post('/cancion/{id}/comentarios','comentarioController@store');
 
 Route::get('/editarAlbum','albumController@index')->middleware('admin');
 Route::post('/editarAlbum/add', 'albumController@store');
